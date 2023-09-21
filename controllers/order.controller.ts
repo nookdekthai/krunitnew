@@ -136,7 +136,7 @@ export const newPayment = CatchAsyncError(
     try {
       const myPayment = await stripe.paymentIntents.create({
         amount: req.body.amount,
-        currency: "USD",
+        currency: "THB",
         metadata: {
           company: "E-Learning",
         },
