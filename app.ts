@@ -21,7 +21,7 @@ app.use(cookieParser());
 // cors => cross origin resource sharing
 app.use(
   cors({
-    origin: ["https://lms-learning-one.vercel.app/"],
+    origin: ["https://krunit.vercel.app/"],
     credentials: true,
   })
 );
