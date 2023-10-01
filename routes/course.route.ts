@@ -1,6 +1,7 @@
 import express from "express";
 import {
   addAnwser,
+  addCourseToUser,
   addQuestion,
   addReplyToReview,
   addReview,
@@ -22,6 +23,8 @@ courseRouter.post(
   authorizeRoles("admin"),
   uploadCourse
 );
+
+courseRouter.post("/add-course-user", isAutheticated, authorizeRoles("admin"), addCourseToUser);
 
 courseRouter.put(
   "/edit-course/:id",

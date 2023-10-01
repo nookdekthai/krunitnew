@@ -21,7 +21,7 @@ app.use(cookieParser());
 // cors => cross origin resource sharing
 app.use(
   cors({
-    origin: ["https://krunit.vercel.app"],
+    origin: process.env.ORIGIN?.split(','),
     credentials: true,
   })
 );
